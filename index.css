@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    height: calc(100vh - 100px);
+    width: 100vw;
+    color: white;
+    font-size: 16px;
+    background-color: yellow;
+}
+
+.header {
+    height: 60px;
+    background-color: yellow;
+    border-bottom: 5px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0px 15px;
+}
+
+.header h1 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: black;
+}
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.wrapper .settings {
+    background-color: black;
+    width: 25%;
+    height: 100%;
+    border-right: 5px solid black;
+    padding: 10px 30px;
+}
+
+.wrapper .board {
+    background-color: green;
+    width: 75%;
+    height: 100%;
+    position: relative
+}
+
+.ml-15 {margin-left: 15px;}
+.ml-10 {margin-left: 10px;}
+.mr-10 {margin-right: 10px;}
+.mb-5 {margin-bottom: 5px;}
+.mt-10 {margin-top: 10px;}
+.mb-10 {margin-bottom: 10px;}
+.ml-5 {margin-left: 5px;}
+.mr-5 {margin-right: 5px;}
+
+input {
+    height: 30px;
+    border-radius: 4px;
+    outline: none;
+    padding: 5px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.d-flex {display: flex;}
+.align-items-center {align-items: center;}
+.justify-content-between {justify-content: space-between;}
+.justify-content-center {justify-content: center;}
+.flex-1 {flex: 1;}
+
+button {
+    height: 30px;
+    padding: 5px 10px;
+    font-weight: 500;
+    border-radius: 4px;
+    color: white;
+}
+
+button#start-game {background-color: green;}
+button#reset-game {background-color: blue;}
+button#clear-game {background-color: red;}
+
+button:disabled {opacity: 0.5; pointer-events: none; cursor: not-allowed;}
+
+.float-right {float: right;}
+
+.board {
+    display: grid;
+    justify-content: center;
+}
+
+.box {border: 2px solid gray; background-color: black; display: flex; justify-content: center; align-items: center;}
+.robo {border-radius: 50%; display: flex; justify-content: center; align-items: center;z-index: 1;}
+.robo.selected {border: 5px solid gold;}
+#robo1 {background-color: red;}
+#robo2 {background-color: green;}
+.box.visited-robo1 {background-color: red;}
+.box.visited-robo2 {background-color: green;}
+
+ol li {padding: 5px;}
+
+/* Slider CSS */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+
+  input:disabled + .slider {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(30px);
+    -ms-transform: translateX(30px);
+    transform: translateX(30px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 30px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+/* Slider CSS */

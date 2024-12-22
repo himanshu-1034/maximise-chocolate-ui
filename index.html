@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maximise Chocolates</title>
+    <link rel="stylesheet" href="./index.css" />
+    <script type="text/javascript" defer async src="./index.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <h1 id="current-score-display"></h1>
+        <h1>Maximise Chocolates</h1>
+        <h1 id="high-score-display"></h1>
+    </div>
+    <div class="wrapper">
+        <div class="settings">
+            <h2 class="mb-5">Instructions</h2>
+            <ol type="1" class="ml-15">
+                <li>Fill in the number of rows and columns and hit start</li>
+                <li>Every block will have numbers. The goal is to collect maximum chocolates</li>
+                <li>Once the board appears, use arrow keys to move the robots downwards</li>
+                <li>The robots can only move downwards. It could be diagonally or straight</li>
+                <li>use the ⬇️ key to move downwards in a single line</li>
+                <li>use ⬅️ , ➡️ keys to move downwards diagonally</li>
+                <li>The top score will be located at the top-right corner</li>
+                <li>The game is over when the robots reach the bottom</li>
+            </ol>
+            <hr class="mt-10 mb-10" />
+            Box size :
+            <div class="d-flex align-items-center mt-10 mb-10">
+                <input type="number" min="2" max="50" value="2" id="box-size" class="flex-1 mr-5" />
+                <label class="switch ml-10 mr-10">
+                    <input type="checkbox" id="auto-play-slider">
+                    <span class="slider round"></span>
+                </label>
+                Auto Play
+            </div>
+            <div class="d-flex align-items-center justify-content-between">
+                <button class="mr-5" id="start-game">Start Game</button>
+                <button class="ml-5 mr-5" id="reset-game">Reset Game</button>
+                <button class="ml-5" id="clear-game">Clear Board</button>
+            </div>
+            <hr class="mt-10 mb-10" />
+            <h1 id="game-over-display">
+
+            </h1>
+        </div>
+        <div class="board" id="game-board">
+        </div>
+    </div>
+</body>
+
+</html>
